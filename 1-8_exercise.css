@@ -5,10 +5,12 @@
   background-color: #FFFFFF;
 }
 
-.list-main-box{
+.main-box{
   width:960px;
   margin: 0 auto;
   padding-top: 50px;
+  padding-bottom: 50px;
+
 }
 
 .list-box-common{
@@ -22,4 +24,35 @@
 
 .list-box:nth-child(odd){
   background-color: #EEEEEE;
+}
+
+.square-box-common{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.square{
+  width: 30%;
+  height: 200px;
+}
+
+/* ”3の倍数+3” 番目以外を対象とする */
+.square:not(:nth-child(3n+3)){
+  margin-right: 5%;
+}
+
+/* 最後から4番目以降全部を対象とする */
+.square:nth-last-child(n+4){
+  margin-bottom: 40px;
+}
+
+/* ”4の倍数+1” 番目を対象とする */
+.square:nth-child(4n+1){
+  background-color: #FF9900;
+}
+
+/* ”4の倍数+1” 番目以外を対象とする */
+.square:not(:nth-child(4n+1)){
+  background-color: #FFCC00;
 }
